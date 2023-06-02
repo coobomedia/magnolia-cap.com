@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme")
 const colors = require("tailwindcss/colors")
+const { text } = require("stream/consumers")
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -29,15 +30,20 @@ module.exports = {
         //   900: "#340F04",
         //   950: "#170702",
         // },
-        primary: colors.blue,
 
-        secondary: colors.orange,
-        accent: colors.slate,
+        primary: "#FFF7F1",
+        secondary: "#011640",
+        text: "#011640",
+        accent: "#FECACA",
+        // primary: colors.rose,
+
+        // secondary: colors.orange,
+        // accent: colors.slate,
       },
       fontFamily: {
         // display: ["var(--font-roboto)", ...fontFamily.sans],
         // sans: ["var(--font-archivo)", ...fontFamily.sans],
-        sans: ["var(--font-eb-garamond)", ...fontFamily.sans],
+        sans: ["var(--font-montserrat-sans)", ...fontFamily.sans],
         display: ["var(--font-nunito-sans)", ...fontFamily.sans],
       },
       keyframes: {
