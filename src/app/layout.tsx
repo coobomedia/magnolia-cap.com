@@ -11,6 +11,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils"
 import Footer from "@/components/footer"
+import MagHeader from "@/components/mag-header"
 import { Toaster } from "@/components/ui/toaster"
 
 const ebGaramond = EB_Garamond({
@@ -52,6 +53,7 @@ export default function RootLayout({
       lang="en"
     >
       <body className=" bg-white  ">
+        <MagHeader />
         {children}
         <Footer />
         {/* <Toaster />
