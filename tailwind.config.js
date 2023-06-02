@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme")
 const colors = require("tailwindcss/colors")
-const { text } = require("stream/consumers")
 
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
