@@ -59,6 +59,7 @@ export default function MagHeader() {
           </a> */}
         </div>
       </nav>
+
       <Dialog
         as="div"
         className="lg:hidden"
