@@ -1,11 +1,15 @@
-import JWRHeader from "@/components/jwr-header"
-import { Button } from "@/components/ui/button"
+import Hero from "@/components/mag-home-hero"
+import HomeNews from "@/components/mag-home-news"
+import TargetAssetClasses from "@/components/mag-home-targets"
+import Team from "@/components/mag-home-team"
 
 export default function HomePage() {
   return (
-    <main className="">
-      <h1> Hello world bam!</h1>
-      <h2 className="font-display">Display Font</h2>
+    <main className="overflow-x-hidden">
+      <Hero />
+      <HomeNews />
+      <TargetAssetClasses />
+      <Team />
     </main>
   )
 }
