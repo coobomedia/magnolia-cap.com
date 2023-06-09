@@ -51,6 +51,7 @@ export default function RootLayout({
         "scroll-smooth font-sans antialiased"
       )}
       lang="en"
+      
     >
       <body className=" bg-white  ">
         <MagHeader />
