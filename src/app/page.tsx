@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
   return (
-    <main className="">
+    <main className="overflow-x-hidden">
       <Hero />
       <HomeNews />
     </main>
