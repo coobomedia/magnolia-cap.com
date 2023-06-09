@@ -40,7 +40,7 @@
     @apply outline-1 outline-current outline-offset-1;
   }
 
-  .body p {
+  body p {
     @apply leading-7 text-base [&:not(:first-child)]:mt-4;
   }
 
@@ -58,68 +58,68 @@
 
   /* Apply base font sizes and styles for typography markup (h2, h2, ul, p, etc.). A helpful addition for whenn page content is consumed from a source managed through a wysiwyg editor. */
 
-  .body :is(h1, h2, h3, h4, h5, h6, p, ul, ol) {
+  body :is(h1, h2, h3, h4, h5, h6, p, ul, ol) {
     @apply mb-4;
   }
 
   /* To enable anchor tag consitency, calculate the scroll-mt tw class by adding the --header-height to the set top margin of the relative element */
 
-  .body :is(h1, h2, h3, h4, h5, h6):not(:first-child) {
+  body :is(h1, h2, h3, h4, h5, h6):not(:first-child) {
     @apply mt-8 scroll-mt-[calc(2rem_+_var(--header-height))];
   }
 
-  .body :is(h1, h2, h3, h4, h5, h6) {
-    @apply font-semibold tracking-wide;
+  body :is(h1, h2, h3, h4, h5, h6) {
+    @apply text-secondary;
   }
 
-  .body h1 {
-    @apply text-5xl;
+  body p {
+    @apply font-light;
   }
 
-  .body h2 {
+  body h1 {
+    @apply text-5xl font-extralight;
+  }
+
+  body h2 {
     @apply text-4xl;
   }
 
-  .body h3 {
+  body h3 {
     @apply text-3xl;
   }
 
-  .body h4 {
+  body h4 {
     @apply text-2xl;
   }
 
-  .body h5 {
+  body h5 {
     @apply text-xl;
   }
 
-  .body h6 {
+  body h6 {
     @apply text-lg;
   }
 
-  .body ul,
-  .body ol {
+  body ul,
+  body ol {
     @apply my-6 ml-6  [&>li]:mt-2;
   }
 
-  .body ul {
+  body ul {
     @apply list-disc;
   }
 
-  .body ol {
+  body ol {
     @apply list-decimal;
   }
 
-  .body a {
-    @apply underline;
-  }
-
-  .body a:hover {
+  body a:hover {
     @apply no-underline;
   }
-  .body small {
+  body small {
     @apply text-sm font-medium leading-none;
   }
-  /* .body blockquote {
+  /* body blockquote {
     @apply mt-6 border-l-2 border-accent-300 pl-6 italic text-accent-800;
   } */
 }
