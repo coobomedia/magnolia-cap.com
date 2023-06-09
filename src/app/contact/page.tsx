@@ -7,6 +7,7 @@ import {
   CloudArrowUpIcon,
   EnvelopeIcon,
   LockClosedIcon,
+  MapPinIcon,
   PhoneIcon,
 } from "@heroicons/react/20/solid"
 // import {
@@ -117,19 +118,19 @@ export default function ContactPage() {
   return (
     <div className="relative isolate bg-white">
       <div className="mx-auto  max-w-7xl border-x pb-32">
-        <div className="bg-white pb-24 pt-12 ">
+        <div className="bg-white pb-10 pt-12 lg:pb-24 ">
           <div className="mx-auto  px-6 lg:px-16">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base  leading-7 text-magGray">
                 Need More Information?
               </h2>
-              <p className="mt-2 text-3xl font-light tracking-tight text-secondary ">
-                Contact us directly or leave a message below And we'll get back
+              <p className="mt-2 text-3xl font-light capitalize tracking-tight text-secondary ">
+                Contact us directly or leave a message below and we'll get back
                 to you ASAP
               </p>
             </div>
-            <div className="mx-auto mt-16  sm:mt-20 lg:mt-24 ">
-              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <div className="mx-auto mt-10  sm:mt-20 lg:mt-24 ">
+              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
                 <div className="flex flex-col">
                   <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
                     <PhoneIcon
@@ -147,7 +148,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col">
                   <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
-                    <PhoneIcon
+                    <EnvelopeIcon
                       className="h-5 w-5 flex-none text-secondary"
                       aria-hidden="true"
                     />
@@ -162,7 +163,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex flex-col">
                   <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
-                    <PhoneIcon
+                    <MapPinIcon
                       className="h-5 w-5 flex-none text-secondary"
                       aria-hidden="true"
                     />
@@ -181,7 +182,7 @@ export default function ContactPage() {
 
         <div className="mx-auto grid   grid-cols-1  lg:grid-cols-3">
           <form
-            className="col-span-2 p-6 shadow lg:p-16 "
+            className="col-span-2 border-y border-gray-200 p-6 lg:p-16 "
             onSubmit={handleFormSubmit(onSubmit)}
           >
             <div className="mx-auto  ">
@@ -371,23 +372,23 @@ export default function ContactPage() {
               </div>
               <div className="mt-8 flex justify-end">
                 <button
-                  className="hover:bg-primary-900 focus-visible:outline-primary-900 flex items-center bg-secondary  px-3.5 py-2.5 text-center font-display text-xs font-semibold tracking-widest text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="hover:bg-primary-900 focus-visible:outline-primary-900 flex items-center bg-secondary  px-10 py-4 text-center font-display  font-semibold tracking-widest text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   type="submit"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
                     <>
-                      {"Submitting"}
+                      {"Sending"}
                       <Loader2 className="ml-2 h-4 w-4 animate-spin" />
                     </>
                   ) : (
-                    "Submit"
+                    "Send"
                   )}
                 </button>
               </div>
             </div>
           </form>
-          <div className="relative pb-32    ">
+          <div className="relative pb-32">
             <Map />
             <div className="absolute bottom-0 h-32 w-32 bg-accent" />
           </div>
