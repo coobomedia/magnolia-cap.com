@@ -12,7 +12,7 @@ export default function Map() {
   const renderMap = () => {
     return (
       <GoogleMap
-        mapContainerStyle={{ height: "400px", width: "100%" }}
+        mapContainerStyle={{ height: "100%", width: "100%" }}
         center={center}
         zoom={10}
       >
@@ -28,11 +28,11 @@ export default function Map() {
   return isLoaded ? (
     renderMap()
   ) : (
-    <div className="flex h-[400px] items-center justify-center ">
+    <div className="flex h-full items-center justify-center ">
       <div role="status">
         <svg
           aria-hidden="true"
-          className={`h-12 w-12 animate-spin fill-accent-300 text-accent-700`}
+          className="h-12 w-12 animate-spin fill-secondary text-secondary"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
