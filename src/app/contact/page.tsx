@@ -1,200 +1,396 @@
-import Image from "next/image"
+"use client"
+
+import { useToast } from "@/hooks/use-toast"
+import {
+  ArrowPathIcon,
+  BuildingOfficeIcon,
+  CloudArrowUpIcon,
+  EnvelopeIcon,
+  LockClosedIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@heroicons/react/20/solid"
+// import {
+//   BuildingOffice2Icon,
+//   EnvelopeIcon,
+//   PhoneIcon,
+// } from "@heroicons/react/24/outline"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { Loader2 } from "lucide-react"
+import { useForm } from "react-hook-form"
+import * as z from "zod"
+
+import { cn } from "@/lib/utils"
+import Map from "@/components/map"
+
+const features = [
+  {
+    name: "Phone",
+    description:
+      "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
+    href: "#",
+    icon: PhoneIcon,
+  },
+  {
+    name: "Email Address",
+    description:
+      "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
+    href: "#",
+    icon: EnvelopeIcon,
+  },
+  {
+    name: "Address",
+    description:
+      "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
+    href: "#",
+    icon: BuildingOfficeIcon,
+  },
+]
+type FormValues = {
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  message: string
+}
+
+const schema = z.object({
+  firstName: z.string().nonempty({ message: "First name is required" }),
+  lastName: z.string().nonempty({ message: "Last name is required" }),
+  email: z.string().nonempty({ message: "Email is required" }).email(),
+  phone: z.string().nonempty({ message: "Phone is required" }),
+  message: z.string().nonempty({ message: "Message is required" }),
+})
 
 export default function ContactPage() {
+  const { toast } = useToast()
+
+  const {
+    register,
+    handleSubmit: handleFormSubmit,
+    reset,
+    watch,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({
+    resolver: zodResolver(schema),
+  })
+
+  // const watchAllFields = watch()
+
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      )
+      if (response.ok) {
+        console.log("Form submitted successfully")
+
+        toast({
+          title: "Form submitted successfully!",
+          description: "Thank you for your submission.",
+          duration: 5000,
+        })
+        reset()
+      } else {
+        const responseData = await response.json()
+        console.log("Form submission failed:", responseData)
+
+        if (responseData.error) {
+          toast({
+            title: "Uh oh! Something went wrong.",
+            description: responseData.error,
+            duration: 5000,
+            variant: "destructive",
+          })
+        }
+      }
+    } catch (error) {
+      console.log("Error submitting form:", error)
+    }
+  }
   return (
-    <div className="relative bg-white">
-      <div className="lg:absolute lg:inset-0 lg:left-1/2">
-        <Image
-          width={2560}
-          height={3413}
-          className="h-64 w-full bg-accent-50 object-cover sm:h-80 lg:absolute lg:h-full"
-          src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-          alt=""
-        />
-      </div>
-      <div className="container pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:grid-cols-2 lg:pt-32">
-        <div className=" ">
-          <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <h2 className="text-3xl font-bold tracking-tight text-accent-900">
-              Let&apos;s work together
-            </h2>
-            <p className="mt-2 text-lg leading-8 text-accent-600">
-              Proin volutpat consequat porttitor cras nullam gravida at orci
-              molestie a eu arcu sed ut tincidunt magna.
-            </p>
-            <form action="#" method="POST" className="mt-16">
+    <div className="relative isolate bg-white">
+      <div className="mx-auto  max-w-7xl border-x pb-32">
+        <div className="bg-white pb-10 pt-12 lg:pb-24 ">
+          <div className="mx-auto  px-6 lg:px-16">
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <h2 className="text-base  leading-7 text-magGray">
+                Need More Information?
+              </h2>
+              <p className="mt-2 text-3xl font-light capitalize tracking-tight text-secondary ">
+                Contact us directly or leave a message below and we'll get back
+                to you ASAP
+              </p>
+            </div>
+            <div className="mx-auto mt-10  sm:mt-20 lg:mt-24 ">
+              <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-4 lg:max-w-none lg:grid-cols-3 lg:gap-y-16">
+                <div className="flex flex-col">
+                  <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
+                    <PhoneIcon
+                      className="h-5 w-5 flex-none text-secondary"
+                      aria-hidden="true"
+                    />
+                    Phone
+                  </dt>
+                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-text">
+                    <ul className="flex-auto">
+                      <li>Andrew: 713.818.3300</li>
+                      <li>Travis: 713.516.5833</li>
+                    </ul>
+                  </dd>
+                </div>
+                <div className="flex flex-col">
+                  <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
+                    <EnvelopeIcon
+                      className="h-5 w-5 flex-none text-secondary"
+                      aria-hidden="true"
+                    />
+                    Email
+                  </dt>
+                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-text">
+                    <ul className="flex-auto">
+                      <li>akollaer@magnolia-cap.com</li>
+                      <li>tfrazier@magnolia-cap.com</li>
+                    </ul>
+                  </dd>
+                </div>
+                <div className="flex flex-col">
+                  <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-gray-900">
+                    <MapPinIcon
+                      className="h-5 w-5 flex-none text-secondary"
+                      aria-hidden="true"
+                    />
+                    Address
+                  </dt>
+                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-text">
+                    <ul className="flex-auto">
+                      <li>675 Bering Drive, Suite 140</li>
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto grid   grid-cols-1  lg:grid-cols-3">
+          <form
+            className="col-span-2 border-y border-gray-200 p-6 lg:p-16 "
+            onSubmit={handleFormSubmit(onSubmit)}
+          >
+            <div className="mx-auto  ">
+              <h3 className=" mb-5 text-xl font-medium  text-secondary">
+                Write Us And We'll Get Back To You
+              </h3>
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                <div>
+                <div className="">
                   <label
                     htmlFor="first-name"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
+                    className="block font-display text-xs font-medium leading-6 tracking-wider text-secondary"
                   >
-                    First name
+                    First Name
                   </label>
-                  <div className="mt-2.5">
+                  <div className="relative mt-2  shadow-sm">
                     <input
                       type="text"
-                      name="first-name"
                       id="first-name"
-                      autoComplete="given-name"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
+                      {...register("firstName")}
+                      className={cn(
+                        "block w-full  border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                        {
+                          "text-secondary  ring-magGray placeholder:text-text focus:ring-2  focus:ring-secondary ":
+                            !errors["firstName"],
+                          "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                            errors["firstName"],
+                        }
+                      )}
+                      aria-invalid={errors.firstName ? "true" : "false"}
+                      aria-describedby="first-name-error"
                     />
                   </div>
+
+                  {errors["firstName"] && (
+                    <p
+                      className="mt-2 text-sm text-red-600"
+                      id="email-error"
+                      role="alert"
+                    >
+                      {errors["firstName"].message}
+                    </p>
+                  )}
                 </div>
-                <div>
+                <div className="">
                   <label
                     htmlFor="last-name"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
+                    className="block font-display text-xs font-medium leading-6 tracking-wider text-secondary"
                   >
-                    Last name
+                    Last Name
                   </label>
-                  <div className="mt-2.5">
+                  <div className="relative mt-2  shadow-sm">
                     <input
                       type="text"
-                      name="last-name"
                       id="last-name"
-                      autoComplete="family-name"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
+                      {...register("lastName")}
+                      className={cn(
+                        "block w-full  border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                        {
+                          "text-secondary  ring-magGray placeholder:text-text focus:ring-2  focus:ring-secondary ":
+                            !errors["lastName"],
+                          "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                            errors["lastName"],
+                        }
+                      )}
+                      aria-invalid={errors.lastName ? "true" : "false"}
+                      aria-describedby="last-name-error"
                     />
                   </div>
+
+                  {errors["lastName"] && (
+                    <p
+                      className="mt-2 text-sm text-red-600"
+                      id="email-error"
+                      role="alert"
+                    >
+                      {errors["lastName"].message}
+                    </p>
+                  )}
                 </div>
-                <div className="sm:col-span-2">
+
+                <div className="">
+                  <label
+                    htmlFor="phone"
+                    className="block font-display text-xs font-medium leading-6 tracking-wider text-secondary"
+                  >
+                    Phone
+                  </label>
+                  <div className="relative mt-2  shadow-sm">
+                    <input
+                      type="tel"
+                      id="phone"
+                      {...register("phone")}
+                      className={cn(
+                        "block w-full  border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                        {
+                          "text-secondary  ring-magGray placeholder:text-text focus:ring-2  focus:ring-secondary ":
+                            !errors["phone"],
+                          "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                            errors["phone"],
+                        }
+                      )}
+                      aria-invalid={errors.phone ? "true" : "false"}
+                      aria-describedby="phone-error"
+                    />
+                  </div>
+
+                  {errors["phone"] && (
+                    <p
+                      className="mt-2 text-sm text-red-600"
+                      id="phone-error"
+                      role="alert"
+                    >
+                      {errors["phone"].message}
+                    </p>
+                  )}
+                </div>
+
+                <div className="">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
+                    className="block font-display text-xs font-medium leading-6 tracking-wider text-secondary"
                   >
                     Email
                   </label>
-                  <div className="mt-2.5">
+                  <div className="relative mt-2  shadow-sm">
                     <input
-                      id="email"
-                      name="email"
                       type="email"
-                      autoComplete="email"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
+                      id="email"
+                      {...register("email")}
+                      className={cn(
+                        "block w-full  border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                        {
+                          "text-secondary  ring-magGray placeholder:text-text focus:ring-2  focus:ring-secondary ":
+                            !errors["email"],
+                          "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                            errors["email"],
+                        }
+                      )}
+                      aria-invalid={errors.email ? "true" : "false"}
+                      aria-describedby="email-error"
                     />
                   </div>
+
+                  {errors["email"] && (
+                    <p
+                      className="mt-2 text-sm text-red-600"
+                      id="email-error"
+                      role="alert"
+                    >
+                      {errors["email"].message}
+                    </p>
+                  )}
                 </div>
+
                 <div className="sm:col-span-2">
                   <label
-                    htmlFor="company"
-                    className="block text-sm font-semibold leading-6 text-accent-900"
+                    htmlFor="message"
+                    className="block font-display text-xs font-medium leading-6 tracking-wider text-secondary"
                   >
-                    Company
+                    Your Message
                   </label>
-                  <div className="mt-2.5">
-                    <input
-                      type="text"
-                      name="company"
-                      id="company"
-                      autoComplete="organization"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <div className="flex justify-between text-sm leading-6">
-                    <label
-                      htmlFor="phone"
-                      className="block font-semibold text-accent-900"
-                    >
-                      Phone
-                    </label>
-                    <p id="phone-description" className="text-accent-400">
-                      Optional
-                    </p>
-                  </div>
-                  <div className="mt-2.5">
-                    <input
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      autoComplete="tel"
-                      aria-describedby="phone-description"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
-                    />
-                  </div>
-                </div>
-                <div className="sm:col-span-2">
-                  <div className="flex justify-between text-sm leading-6">
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold leading-6 text-accent-900"
-                    >
-                      How can we help you?
-                    </label>
-                    <p id="message-description" className="text-accent-400">
-                      Max 500 characters
-                    </p>
-                  </div>
-                  <div className="mt-2.5">
+                  <div className="relative mt-2  ">
                     <textarea
-                      id="message"
-                      name="message"
+                      aria-invalid={errors.message ? "true" : "false"}
+                      {...register("message")}
                       rows={4}
-                      aria-describedby="message-description"
-                      className="block w-full rounded-md border-0 px-3.5 py-2 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:text-sm sm:leading-6"
+                      name="message"
+                      id="message"
+                      className={cn(
+                        "block w-full  border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset  focus:ring-inset  sm:text-sm sm:leading-6",
+                        {
+                          "text-secondary  ring-magGray placeholder:text-text focus:ring-2  focus:ring-secondary ":
+                            !errors["message"],
+                          "focus:ring-red-500 text-red-900 ring-red-300 placeholder:text-red-300 ":
+                            errors["message"],
+                        }
+                      )}
                       defaultValue={""}
                     />
+                    {errors.message && (
+                      <p role="alert" className="mt-2 text-sm text-red-600">
+                        {errors.message?.message}
+                      </p>
+                    )}
                   </div>
                 </div>
-                <fieldset className="sm:col-span-2">
-                  <legend className="block text-sm font-semibold leading-6 text-accent-900">
-                    Expected budget
-                  </legend>
-                  <div className="mt-4 space-y-4 text-sm leading-6 text-accent-600">
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-under-25k"
-                        name="budget"
-                        defaultValue="under_25k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-under-25k">Less than $25K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-25k-50k"
-                        name="budget"
-                        defaultValue="25k-50k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-25k-50k">$25K – $50K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-50k-100k"
-                        name="budget"
-                        defaultValue="50k-100k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-50k-100k">$50K – $100K</label>
-                    </div>
-                    <div className="flex gap-x-2.5">
-                      <input
-                        id="budget-over-100k"
-                        name="budget"
-                        defaultValue="over_100k"
-                        type="radio"
-                        className="mt-1 h-4 w-4 border-accent-300 text-primary-600 shadow-sm focus:ring-primary-600"
-                      />
-                      <label htmlFor="budget-over-100k">$100K+</label>
-                    </div>
-                  </div>
-                </fieldset>
               </div>
-              <div className="mt-10 flex justify-end border-t border-accent-900/10 pt-8">
+              <div className="mt-8 flex justify-end">
                 <button
+                  className="hover:bg-primary-900 focus-visible:outline-primary-900 flex items-center bg-secondary  px-10 py-4 text-center font-display  font-semibold tracking-widest text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   type="submit"
-                  className="rounded-md bg-primary-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                  disabled={isSubmitting}
                 >
-                  Send message
+                  {isSubmitting ? (
+                    <>
+                      {"Sending"}
+                      <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                    </>
+                  ) : (
+                    "Send"
+                  )}
                 </button>
               </div>
-            </form>
+            </div>
+          </form>
+          <div className="relative pb-32">
+            <Map />
+            <div className="absolute bottom-0 h-32 w-32 bg-accent" />
           </div>
         </div>
       </div>
