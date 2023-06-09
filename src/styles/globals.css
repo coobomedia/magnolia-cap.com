@@ -77,11 +77,11 @@
   }
 
   body h1 {
-    @apply text-5xl font-extralight;
+    @apply text-5xl font-extralight uppercase;
   }
 
   body h2 {
-    @apply text-4xl;
+    @apply text-4xl font-extralight uppercase;
   }
 
   body h3 {
