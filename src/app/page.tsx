@@ -1,11 +1,11 @@
 import JWRHeader from "@/components/jwr-header"
+import Hero from "@/components/mag-home-hero"
 import { Button } from "@/components/ui/button"
 
 export default function HomePage() {
   return (
     <main className="">
-      <h1> Hello world bam!</h1>
-      <h2 className="font-display">Display Font</h2>
+      <Hero />
     </main>
   )
 }
