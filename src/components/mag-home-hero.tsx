@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Hero() {
   return (
     <div className="relative isolate overflow-hidden h-[72vh] bg-primary">
-      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex items-center">
+      <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex items-center border-x h-full">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:w-2/3 lg:shrink-0 lg:pt-6">
           <h1 className="mt-10 sm:text-6xl uppercase">
             Streamlined Private Investment Firm

@@ -2,6 +2,7 @@ import Hero from "@/components/mag-home-hero"
 import HomeNews from "@/components/mag-home-news"
 import TargetAssetClasses from "@/components/mag-home-targets"
 import Team from "@/components/mag-home-team"
+import TeamMembers from "@/components/mag-home-team-members"
 
 export default function HomePage() {
   return (
@@ -10,6 +11,7 @@ export default function HomePage() {
       <HomeNews />
       <TargetAssetClasses />
       <Team />
+      <TeamMembers />
     </main>
   )
 }
