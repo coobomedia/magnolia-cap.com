@@ -5,10 +5,10 @@ export default function Hero() {
     <div className="relative isolate overflow-hidden h-[72vh] bg-primary">
       <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex items-center border-x h-full">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:w-2/3 lg:shrink-0 lg:pt-6">
-          <h1 className="mt-10 sm:text-6xl uppercase">
+          <h1 className="mt-10 uppercase sm:text-6xl">
             Streamlined Private Investment Firm
           </h1>
-          <p className="mt-6 leading-8 text-primary-300">
+          <p className="text-primary-300 mt-6 leading-8">
             Our underlying purpose is to provide high-quality private investment
             opportunities to investment managers, family offices and
             individuals. Focused on real assets that provide uncorrelated
@@ -24,7 +24,7 @@ export default function Hero() {
                 alt="Magnolia Tree Graphic"
                 width={2432}
                 height={1442}
-                className="w-[76rem] lg:w-[50rem] lg:absolute lg:top-[5%]"
+                className="w-[76rem] lg:absolute lg:top-[5%] lg:w-[50rem]"
               />
             </div>
           </div>

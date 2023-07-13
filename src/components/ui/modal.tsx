@@ -15,7 +15,7 @@ export default function Modal({ openModal, onClose, setModalOpen }) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className=" fixed inset-0 bg-accent-500/75 transition-opacity" />
+          <div className=" bg-accent-500/75 fixed inset-0 transition-opacity" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
@@ -40,12 +40,12 @@ export default function Modal({ openModal, onClose, setModalOpen }) {
                   <div className="mt-3 text-center sm:mt-5">
                     <Dialog.Title
                       as="h3"
-                      className="text-base font-semibold leading-6 text-accent-900"
+                      className="text-accent-900 text-base font-semibold leading-6"
                     >
                       Payment successful
                     </Dialog.Title>
                     <div className="mt-2">
-                      <p className="text-sm text-accent-500">
+                      <p className="text-accent-500 text-sm">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Consequatur amet labore.
                       </p>
@@ -55,7 +55,7 @@ export default function Modal({ openModal, onClose, setModalOpen }) {
                 <div className="mt-5 sm:mt-6">
                   <button
                     type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-primary-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600"
+                    className="bg-primary-600 hover:bg-primary-500 focus-visible:outline-primary-600 inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                     onClick={() => setModalOpen(false)}
                   >
                     Go back to dashboard

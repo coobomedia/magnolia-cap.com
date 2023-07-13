@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import {  useSelectedLayoutSegments } from "next/navigation"
+import { useSelectedLayoutSegments } from "next/navigation"
 import { ChevronRight, Home } from "lucide-react"
 
 export default function Breadcrumbs() {
@@ -14,7 +14,6 @@ export default function Breadcrumbs() {
   // console.log(parts)
 
   const segments = useSelectedLayoutSegments()
-
 
   return (
     <nav className="flex" aria-label="Breadcrumb">

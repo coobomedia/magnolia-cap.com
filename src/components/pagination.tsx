@@ -23,9 +23,9 @@ function CurrentPosts({ currentPosts }) {
                 src={post.image!}
                 fill
                 alt=""
-                className="absolute inset-0 h-full w-full rounded-2xl bg-accent-50 object-cover"
+                className="bg-accent-50 absolute inset-0 h-full w-full rounded-2xl object-cover"
               />
-              <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-accent-900/10" />
+              <div className="ring-accent-900/10 absolute inset-0 rounded-2xl ring-1 ring-inset" />
             </div>
             <div>
               <div className="flex items-center gap-x-4 text-xs">
@@ -36,20 +36,20 @@ function CurrentPosts({ currentPosts }) {
                   <Link
                     key={category.title}
                     href={`/blog/categories/${slugify(category.title!)}`}
-                    className="relative z-10 rounded-full bg-accent-50 px-3 py-1.5 font-medium text-accent-600 hover:bg-accent-100"
+                    className="bg-accent-50 text-accent-600 hover:bg-accent-100 relative z-10 rounded-full px-3 py-1.5 font-medium"
                   >
                     {category.title}
                   </Link>
                 ))}
               </div>
               <div className="group relative max-w-xl">
-                <h2 className="mt-3 text-lg font-semibold leading-6 text-accent-900 group-hover:text-accent-600">
+                <h2 className="text-accent-900 group-hover:text-accent-600 mt-3 text-lg font-semibold leading-6">
                   <Link href={`/blog/${post.slug}`}>
                     <span className="absolute inset-0" />
                     {post.title}
                   </Link>
                 </h2>
-                <p className="mt-5 text-sm leading-6 text-accent-600 group-hover:text-accent-500">
+                <p className="text-accent-600 group-hover:text-accent-500 mt-5 text-sm leading-6">
                   {post.excerpt}
                 </p>
               </div>
@@ -95,7 +95,7 @@ export function PaginatedPosts({ postsPerPage, posts }) {
           nextLabel={
             <div className="flex items-center text-sm">
               <span>Next</span>
-              <ArrowRight className="ml-2 h-5 w-5  text-accent-400" />
+              <ArrowRight className="text-accent-400 ml-2 h-5  w-5" />
             </div>
           }
           onPageChange={handlePageClick}
@@ -104,7 +104,7 @@ export function PaginatedPosts({ postsPerPage, posts }) {
           disabledClassName="invisible"
           previousLabel={
             <div className="flex items-center">
-              <ArrowLeft className="mr-2 h-5 w-5  text-accent-400" />
+              <ArrowLeft className="text-accent-400 mr-2 h-5  w-5" />
               <span className="text-sm">Previous</span>
             </div>
           }

@@ -56,18 +56,18 @@ function ColorsPage() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Colors
         </h1>
-        <p className="text-lg text-accent-700 sm:text-xl">
+        <p className="text-accent-700 text-lg sm:text-xl">
           Custom default color palette for your project. Edit these colors in
           the tailwind.config.js file. Reference this{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://tailwindcss.com/docs/customizing-colors"
           >
             link
           </a>{" "}
-          for further customization. Hover and click on a color to copy the
-          hex value.
+          for further customization. Hover and click on a color to copy the hex
+          value.
         </p>
       </section>
       <Separator className="my-4 " />
@@ -123,8 +123,8 @@ function ColorsPage() {
                     </Tooltip>
                   </TooltipProvider>
 
-                  <p className="mt-1 text-sm text-accent-900">{key}</p>
-                  <p className="text-xs lowercase text-accent-500">
+                  <p className="text-accent-900 mt-1 text-sm">{key}</p>
+                  <p className="text-accent-500 text-xs lowercase">
                     {hexValue}
                   </p>
                 </div>
@@ -184,8 +184,8 @@ function ColorsPage() {
                     </Tooltip>
                   </TooltipProvider>
 
-                  <p className="mt-1 text-sm text-accent-900">{key}</p>
-                  <p className="text-xs lowercase text-accent-500">
+                  <p className="text-accent-900 mt-1 text-sm">{key}</p>
+                  <p className="text-accent-500 text-xs lowercase">
                     {hexValue}
                   </p>
                 </div>
@@ -244,8 +244,8 @@ function ColorsPage() {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                  <p className="mt-1 text-sm text-accent-900">{key}</p>
-                  <p className="text-xs lowercase text-accent-500">
+                  <p className="text-accent-900 mt-1 text-sm">{key}</p>
+                  <p className="text-accent-500 text-xs lowercase">
                     {hexValue}
                   </p>
                 </div>

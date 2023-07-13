@@ -64,7 +64,7 @@ export default function HomeSlider() {
         <div className="keen-slider__slide ">
           <div
             style={{ opacity: opacities[0] }}
-            className="relative isolate overflow-hidden bg-gradient-to-b from-primary-100/20"
+            className="from-primary-100/20 relative isolate overflow-hidden bg-gradient-to-b"
           >
             <div className="mx-auto  pb-24 pt-10 lg:container sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:py-40">
               <div className="px-6 lg:px-0 lg:pt-4">
@@ -72,22 +72,22 @@ export default function HomeSlider() {
                   <div className="max-w-lg">
                     <div className="">
                       <a href="#" className="inline-flex space-x-6">
-                        <span className="rounded-full bg-accent-600/10 px-3 py-1 text-sm font-semibold leading-6 text-accent-600 ring-1 ring-inset ring-accent-600/10">
+                        <span className="bg-accent-600/10 text-accent-600 ring-accent-600/10 rounded-full px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
                           What&apos;s new
                         </span>
-                        <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-accent-600">
+                        <span className="text-accent-600 inline-flex items-center space-x-2 text-sm font-medium leading-6">
                           <span>Just shipped v0.1.0</span>
                           <ChevronRight
-                            className="h-5 w-5 text-accent-400"
+                            className="text-accent-400 h-5 w-5"
                             aria-hidden="true"
                           />
                         </span>
                       </a>
                     </div>
-                    <h1 className="mt-10 text-4xl font-bold tracking-tight text-accent-900 sm:text-6xl">
+                    <h1 className="text-accent-900 mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
                       Coobo Template
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-accent-600">
+                    <p className="text-accent-600 mt-6 text-lg leading-8">
                       Anim aute id magna aliqua ad ad non deserunt sunt. Qui
                       irure qui lorem cupidatat commodo. Elit sunt amet fugiat
                       veniam occaecat fugiat aliqua.
@@ -95,14 +95,14 @@ export default function HomeSlider() {
                     <div className="mt-10 flex items-center gap-x-6">
                       <a
                         href="#"
-                        className="rounded-md bg-accent-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-800"
+                        className="bg-accent-800 hover:bg-accent-700 focus-visible:outline-accent-800 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                       >
                         Documentation
                       </a>
                       <a
                         target="_blank"
                         href="https://github.com/coobomedia/coobo-template"
-                        className="text-sm font-semibold leading-6 text-accent-900"
+                        className="text-accent-900 text-sm font-semibold leading-6"
                       >
                         View on GitHub <span aria-hidden="true">→</span>
                       </a>
@@ -112,24 +112,24 @@ export default function HomeSlider() {
               </div>
               <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                 <div
-                  className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-accent-600/10 ring-1 ring-accent-50 md:-mr-20 lg:-mr-36"
+                  className="shadow-accent-600/10 ring-accent-50 absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl ring-1 md:-mr-20 lg:-mr-36"
                   aria-hidden="true"
                 />
                 <div className="shadow-lg md:rounded-3xl">
                   <div className="bg-accent-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
                     <div
-                      className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-accent-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
+                      className="bg-accent-100 absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
                       aria-hidden="true"
                     />
                     <div className="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
                       <div className="mx-auto max-w-2xl md:mx-0 md:max-w-none">
-                        <div className="w-screen overflow-hidden rounded-tl-xl bg-accent-900">
-                          <div className="flex bg-accent-800/40 ring-1 ring-white/5">
-                            <div className="-mb-px flex text-sm font-medium leading-6 text-accent-400">
+                        <div className="bg-accent-900 w-screen overflow-hidden rounded-tl-xl">
+                          <div className="bg-accent-800/40 flex ring-1 ring-white/5">
+                            <div className="text-accent-400 -mb-px flex text-sm font-medium leading-6">
                               <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
                                 NotificationSetting.jsx
                               </div>
-                              <div className="border-r border-accent-600/10 px-4 py-2">
+                              <div className="border-accent-600/10 border-r px-4 py-2">
                                 App.jsx
                               </div>
                             </div>
@@ -152,7 +152,7 @@ export default function HomeSlider() {
         <div className="keen-slider__slide ">
           <div
             style={{ opacity: opacities[1] }}
-            className="relative isolate overflow-hidden bg-gradient-to-b from-primary-100/20"
+            className="from-primary-100/20 relative isolate overflow-hidden bg-gradient-to-b"
           >
             <div className="container  mx-auto pb-24 pt-10 sm:pb-32 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:py-40">
               <div className="px-6 lg:px-0 lg:pt-4">
@@ -160,22 +160,22 @@ export default function HomeSlider() {
                   <div className="max-w-lg">
                     <div className="">
                       <a href="#" className="inline-flex space-x-6">
-                        <span className="rounded-full bg-accent-600/10 px-3 py-1 text-sm font-semibold leading-6 text-accent-600 ring-1 ring-inset ring-accent-600/10">
+                        <span className="bg-accent-600/10 text-accent-600 ring-accent-600/10 rounded-full px-3 py-1 text-sm font-semibold leading-6 ring-1 ring-inset">
                           What&apos;s new
                         </span>
-                        <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-accent-600">
+                        <span className="text-accent-600 inline-flex items-center space-x-2 text-sm font-medium leading-6">
                           <span>Just shipped v0.1.0</span>
                           <ChevronRight
-                            className="h-5 w-5 text-accent-400"
+                            className="text-accent-400 h-5 w-5"
                             aria-hidden="true"
                           />
                         </span>
                       </a>
                     </div>
-                    <h1 className="mt-10 text-4xl font-bold tracking-tight text-accent-900 sm:text-6xl">
+                    <h1 className="text-accent-900 mt-10 text-4xl font-bold tracking-tight sm:text-6xl">
                       Coobo Template
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-accent-600">
+                    <p className="text-accent-600 mt-6 text-lg leading-8">
                       Anim aute id magna aliqua ad ad non deserunt sunt. Qui
                       irure qui lorem cupidatat commodo. Elit sunt amet fugiat
                       veniam occaecat fugiat aliqua.
@@ -183,14 +183,14 @@ export default function HomeSlider() {
                     <div className="mt-10 flex items-center gap-x-6">
                       <a
                         href="#"
-                        className="rounded-md bg-accent-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-accent-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent-800"
+                        className="bg-accent-800 hover:bg-accent-700 focus-visible:outline-accent-800 rounded-md px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                       >
                         Documentation
                       </a>
                       <a
                         target="_blank"
                         href="https://github.com/coobomedia/coobo-template"
-                        className="text-sm font-semibold leading-6 text-accent-900"
+                        className="text-accent-900 text-sm font-semibold leading-6"
                       >
                         View on GitHub <span aria-hidden="true">→</span>
                       </a>
@@ -200,24 +200,24 @@ export default function HomeSlider() {
               </div>
               <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                 <div
-                  className="absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl shadow-accent-600/10 ring-1 ring-accent-50 md:-mr-20 lg:-mr-36"
+                  className="shadow-accent-600/10 ring-accent-50 absolute inset-y-0 right-1/2 -z-10 -mr-10 w-[200%] skew-x-[-30deg] bg-white shadow-xl ring-1 md:-mr-20 lg:-mr-36"
                   aria-hidden="true"
                 />
                 <div className="shadow-lg md:rounded-3xl">
                   <div className="bg-accent-500 [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
                     <div
-                      className="absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] bg-accent-100 opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
+                      className="bg-accent-100 absolute -inset-y-px left-1/2 -z-10 ml-10 w-[200%] skew-x-[-30deg] opacity-20 ring-1 ring-inset ring-white md:ml-20 lg:ml-36"
                       aria-hidden="true"
                     />
                     <div className="relative px-6 pt-8 sm:pt-16 md:pl-16 md:pr-0">
                       <div className="mx-auto max-w-2xl md:mx-0 md:max-w-none">
-                        <div className="w-screen overflow-hidden rounded-tl-xl bg-accent-900">
-                          <div className="flex bg-accent-800/40 ring-1 ring-white/5">
-                            <div className="-mb-px flex text-sm font-medium leading-6 text-accent-400">
+                        <div className="bg-accent-900 w-screen overflow-hidden rounded-tl-xl">
+                          <div className="bg-accent-800/40 flex ring-1 ring-white/5">
+                            <div className="text-accent-400 -mb-px flex text-sm font-medium leading-6">
                               <div className="border-b border-r border-b-white/20 border-r-white/10 bg-white/5 px-4 py-2 text-white">
                                 NotificationSetting.jsx
                               </div>
-                              <div className="border-r border-accent-600/10 px-4 py-2">
+                              <div className="border-accent-600/10 border-r px-4 py-2">
                                 App.jsx
                               </div>
                             </div>

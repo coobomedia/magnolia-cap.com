@@ -41,7 +41,7 @@ const SearchPage = () => {
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl">
             Showing results for:
           </h1>
-          <p className=" text-lg italic text-accent-700 sm:text-xl">
+          <p className=" text-accent-700 text-lg italic sm:text-xl">
             {searchQuery}
           </p>
         </section>
@@ -50,7 +50,7 @@ const SearchPage = () => {
           <div role="status">
             <svg
               aria-hidden="true"
-              className={`h-12 w-12 animate-spin fill-accent-300 text-accent-700`}
+              className={`fill-accent-300 text-accent-700 h-12 w-12 animate-spin`}
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,16 +78,16 @@ const SearchPage = () => {
           <h1 className="text-3xl font-extrabold  leading-tight tracking-tighter sm:text-3xl">
             Showing results for:
           </h1>
-          <p className="text-lg italic text-accent-700 sm:text-xl">
+          <p className="text-accent-700 text-lg italic sm:text-xl">
             {searchQuery}
           </p>
         </section>
         <Separator className="my-4 " />
         <div className="mt-10 ">
-          <h2 className="s mt-4 text-2xl font-bold tracking-tight text-accent-900">
+          <h2 className="s text-accent-900 mt-4 text-2xl font-bold tracking-tight">
             Sorry
           </h2>
-          <p className="mt-6 text-base leading-7 text-accent-600">
+          <p className="text-accent-600 mt-6 text-base leading-7">
             We couldn&rsquo;t find any results matching the search term you
             provided.
           </p>
@@ -102,7 +102,7 @@ const SearchPage = () => {
         <h1 className="text-3xl font-extrabold  leading-tight tracking-tighter sm:text-3xl">
           Showing results for:
         </h1>
-        <p className=" text-lg italic text-accent-700 sm:text-xl">
+        <p className=" text-accent-700 text-lg italic sm:text-xl">
           {searchQuery}
         </p>
       </section>

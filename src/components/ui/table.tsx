@@ -22,31 +22,31 @@ export default function Table({ className, people }: Props) {
               <tr>
                 <th
                   scope="col"
-                  className="bg-opacity/75 sticky top-[--header-height]  z-10 border-b border-accent-300 bg-white py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-accent-900 backdrop-blur sm:pl-6 lg:pl-8"
+                  className="bg-opacity/75 border-accent-300 text-accent-900  sticky top-[--header-height] z-10 border-b bg-white py-3.5 pl-4 pr-3 text-left text-sm font-semibold backdrop-blur sm:pl-6 lg:pl-8"
                 >
                   Name
                 </th>
                 <th
                   scope="col"
-                  className="bg-opacity/75 sticky top-[--header-height]  z-10 hidden border-b border-accent-300 bg-white px-3 py-3.5 text-left text-sm font-semibold text-accent-900 backdrop-blur sm:table-cell"
+                  className="bg-opacity/75 border-accent-300 text-accent-900  sticky top-[--header-height] z-10 hidden border-b bg-white px-3 py-3.5 text-left text-sm font-semibold backdrop-blur sm:table-cell"
                 >
                   Title
                 </th>
                 <th
                   scope="col"
-                  className="bg-opacity/75 sticky top-[--header-height]  z-10 hidden border-b border-accent-300 bg-white px-3 py-3.5 text-left text-sm font-semibold text-accent-900 backdrop-blur lg:table-cell"
+                  className="bg-opacity/75 border-accent-300 text-accent-900  sticky top-[--header-height] z-10 hidden border-b bg-white px-3 py-3.5 text-left text-sm font-semibold backdrop-blur lg:table-cell"
                 >
                   Email
                 </th>
                 <th
                   scope="col"
-                  className="bg-opacity/75 sticky top-[--header-height]  z-10 border-b border-accent-300 bg-white px-3 py-3.5 text-left text-sm font-semibold text-accent-900 backdrop-blur"
+                  className="bg-opacity/75 border-accent-300 text-accent-900  sticky top-[--header-height] z-10 border-b bg-white px-3 py-3.5 text-left text-sm font-semibold backdrop-blur"
                 >
                   Role
                 </th>
                 <th
                   scope="col"
-                  className="bg-opacity/75 sticky top-[--header-height]  z-10 border-b border-accent-300 bg-white py-3.5 pl-3 pr-4 backdrop-blur sm:pr-6 lg:pr-8"
+                  className="bg-opacity/75 border-accent-300 sticky  top-[--header-height] z-10 border-b bg-white py-3.5 pl-3 pr-4 backdrop-blur sm:pr-6 lg:pr-8"
                 >
                   <span className="sr-only">Edit</span>
                 </th>
@@ -58,9 +58,9 @@ export default function Table({ className, people }: Props) {
                   <td
                     className={cn(
                       personIdx !== people.length - 1
-                        ? "border-b border-accent-200"
+                        ? "border-accent-200 border-b"
                         : "",
-                      "whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-accent-900 sm:pl-6 lg:pl-8"
+                      "text-accent-900 whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium sm:pl-6 lg:pl-8"
                     )}
                   >
                     {person.name}
@@ -68,9 +68,9 @@ export default function Table({ className, people }: Props) {
                   <td
                     className={cn(
                       personIdx !== people.length - 1
-                        ? "border-b border-accent-200"
+                        ? "border-accent-200 border-b"
                         : "",
-                      "hidden whitespace-nowrap px-3 py-4 text-sm text-accent-500 sm:table-cell"
+                      "text-accent-500 hidden whitespace-nowrap px-3 py-4 text-sm sm:table-cell"
                     )}
                   >
                     {person.title}
@@ -78,9 +78,9 @@ export default function Table({ className, people }: Props) {
                   <td
                     className={cn(
                       personIdx !== people.length - 1
-                        ? "border-b border-accent-200"
+                        ? "border-accent-200 border-b"
                         : "",
-                      "hidden whitespace-nowrap px-3 py-4 text-sm text-accent-500 lg:table-cell"
+                      "text-accent-500 hidden whitespace-nowrap px-3 py-4 text-sm lg:table-cell"
                     )}
                   >
                     {person.email}
@@ -88,9 +88,9 @@ export default function Table({ className, people }: Props) {
                   <td
                     className={cn(
                       personIdx !== people.length - 1
-                        ? "border-b border-accent-200"
+                        ? "border-accent-200 border-b"
                         : "",
-                      "whitespace-nowrap px-3 py-4 text-sm text-accent-500"
+                      "text-accent-500 whitespace-nowrap px-3 py-4 text-sm"
                     )}
                   >
                     {person.role}
@@ -98,7 +98,7 @@ export default function Table({ className, people }: Props) {
                   <td
                     className={cn(
                       personIdx !== people.length - 1
-                        ? "border-b border-accent-200"
+                        ? "border-accent-200 border-b"
                         : "",
                       "relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-8 lg:pr-8"
                     )}

@@ -167,7 +167,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="bg-opacity/25 fixed inset-0 bg-accent-900" />
+            <div className="bg-opacity/25 bg-accent-900 fixed inset-0" />
           </Transition.Child>
 
           <div className="fixed inset-0 z-40 flex">
@@ -184,7 +184,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                 <div className="flex px-4 pb-2 pt-5">
                   <button
                     type="button"
-                    className="-m-2 inline-flex items-center justify-center rounded-md p-2 text-accent-400"
+                    className="text-accent-400 -m-2 inline-flex items-center justify-center rounded-md p-2"
                     onClick={() => setOpen(false)}
                   >
                     <span className="sr-only">Close menu</span>
@@ -194,7 +194,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
 
                 {/* Links */}
                 <Tab.Group as="div" className="mt-2">
-                  <div className="border-b border-accent-200">
+                  <div className="border-accent-200 border-b">
                     <Tab.List className="-mb-px flex space-x-8 px-4">
                       {navigation.categories.map((category) => (
                         <Tab
@@ -203,7 +203,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                             cn(
                               selected
                                 ? "border-primary-800 text-primary-800"
-                                : "border-transparent text-accent-900",
+                                : "text-accent-900 border-transparent",
                               "flex-1 whitespace-nowrap border-b-2 px-1 py-4 text-base font-medium"
                             )
                           }
@@ -225,7 +225,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                               key={item.name}
                               className="group relative text-sm"
                             >
-                              <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-accent-100 group-hover:opacity-75">
+                              <div className="aspect-h-1 aspect-w-1 bg-accent-100 overflow-hidden rounded-lg group-hover:opacity-75">
                                 <img
                                   src={item.imageSrc}
                                   alt={item.imageAlt}
@@ -234,7 +234,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                               </div>
                               <a
                                 href={item.href}
-                                className="mt-6 block font-medium text-accent-900"
+                                className="text-accent-900 mt-6 block font-medium"
                               >
                                 <span
                                   className="absolute inset-0 z-10"
@@ -252,7 +252,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                           <div key={section.name}>
                             <p
                               id={`${category.id}-${section.id}-heading-mobile`}
-                              className="font-medium text-accent-900"
+                              className="text-accent-900 font-medium"
                             >
                               {section.name}
                             </p>
@@ -265,7 +265,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                 <li key={item.name} className="flow-root">
                                   <a
                                     href={item.href}
-                                    className="-m-2 block p-2 text-accent-500"
+                                    className="text-accent-500 -m-2 block p-2"
                                   >
                                     {item.name}
                                   </a>
@@ -279,12 +279,12 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   </Tab.Panels>
                 </Tab.Group>
 
-                <div className="space-y-6 border-t border-accent-200 px-4 py-6">
+                <div className="border-accent-200 space-y-6 border-t px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
-                        className="-m-2 block p-2 font-medium text-accent-900"
+                        className="text-accent-900 -m-2 block p-2 font-medium"
                       >
                         {page.name}
                       </a>
@@ -292,11 +292,11 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   ))}
                 </div>
 
-                <div className="space-y-6 border-t border-accent-200 px-4 py-6">
+                <div className="border-accent-200 space-y-6 border-t px-4 py-6">
                   <div className="flow-root">
                     <a
                       href="#"
-                      className="-m-2 block p-2 font-medium text-accent-900"
+                      className="text-accent-900 -m-2 block p-2 font-medium"
                     >
                       Sign in
                     </a>
@@ -304,21 +304,21 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                   <div className="flow-root">
                     <a
                       href="#"
-                      className="-m-2 block p-2 font-medium text-accent-900"
+                      className="text-accent-900 -m-2 block p-2 font-medium"
                     >
                       Create account
                     </a>
                   </div>
                 </div>
 
-                <div className="border-t border-accent-200 px-4 py-6">
+                <div className="border-accent-200 border-t px-4 py-6">
                   <a href="#" className="-m-2 flex items-center p-2">
                     <img
                       src="https://tailwindui.com/img/flags/flag-canada.svg"
                       alt=""
                       className="block h-auto w-5 shrink-0"
                     />
-                    <span className="ml-3 block text-base font-medium text-accent-900">
+                    <span className="text-accent-900 ml-3 block text-base font-medium">
                       CAD
                     </span>
                     <span className="sr-only">, change currency</span>
@@ -331,7 +331,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-primary-950 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <p className="bg-primary-950 flex h-10 items-center justify-center px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p>
 
@@ -343,7 +343,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                className="rounded-md bg-white p-2 text-accent-400 lg:hidden"
+                className="text-accent-400 rounded-md bg-white p-2 lg:hidden"
                 onClick={() => setOpen(true)}
               >
                 <span className="sr-only">Open menu</span>
@@ -362,7 +362,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                               className={cn(
                                 open
                                   ? "border-primary-800 text-primary-800"
-                                  : "border-transparent text-accent-700 hover:text-accent-800",
+                                  : "text-accent-700 hover:text-accent-800 border-transparent",
                                 "relative z-10 -mb-px flex items-center border-b-2 pt-px font-display text-xs font-medium uppercase tracking-wider transition-colors duration-200 ease-out"
                               )}
                             >
@@ -379,7 +379,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-accent-500">
+                            <Popover.Panel className="text-accent-500 absolute inset-x-0 top-full text-sm">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div
                                 className="absolute inset-0 top-1/2 bg-white shadow"
@@ -395,7 +395,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                           key={item.name}
                                           className="group relative text-base sm:text-sm"
                                         >
-                                          <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-accent-100 group-hover:opacity-75">
+                                          <div className="aspect-h-1 aspect-w-1 bg-accent-100 overflow-hidden rounded-lg group-hover:opacity-75">
                                             <img
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
@@ -404,7 +404,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                           </div>
                                           <a
                                             href={item.href}
-                                            className="mt-6 block font-display font-medium uppercase tracking-wider text-accent-900"
+                                            className="text-accent-900 mt-6 block font-display font-medium uppercase tracking-wider"
                                           >
                                             <span
                                               className="absolute inset-0 z-10"
@@ -426,7 +426,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                                         <div key={section.name}>
                                           <p
                                             id={`${section.name}-heading`}
-                                            className="font-display text-xs font-medium uppercase tracking-wider text-accent-900"
+                                            className="text-accent-900 font-display text-xs font-medium uppercase tracking-wider"
                                           >
                                             {section.name}
                                           </p>
@@ -466,7 +466,7 @@ export default function JWRHeader({ position, className }: SiteHeaderProps) {
                     <a
                       key={page.name}
                       href={page.href}
-                      className="flex items-center font-display text-xs font-medium uppercase tracking-wider text-accent-700 hover:text-accent-800"
+                      className="text-accent-700 hover:text-accent-800 flex items-center font-display text-xs font-medium uppercase tracking-wider"
                     >
                       {page.name}
                     </a>

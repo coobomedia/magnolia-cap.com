@@ -30,12 +30,12 @@ export default function Breadcrumbs() {
           <li key={index}>
             <div className="flex items-center">
               <ChevronRight
-                className="h-5 w-5 shrink-0 text-accent-400"
+                className="text-accent-400 h-5 w-5 shrink-0"
                 aria-hidden="true"
               />
               <a
                 href="#"
-                className="ml-4 text-sm font-medium capitalize text-accent-500 hover:text-accent-700"
+                className="text-accent-500 hover:text-accent-700 ml-4 text-sm font-medium capitalize"
                 // aria-current={segment.current ? "page" : undefined}
               >
                 {segment}
