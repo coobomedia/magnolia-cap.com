@@ -1,6 +1,6 @@
 function LogoCloud() {
   return (
-    <div className="relative bg-accent-900 py-24 sm:py-32">
+    <div className="bg-accent-900 relative py-24 sm:py-32">
       <div className="absolute inset-0 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ function LogoCloud() {
             <h2 className="text-5xl tracking-tight text-white">
               Premium Brands, Endless Style
             </h2>
-            <p className="mt-6 text-lg leading-8 text-accent-300">
+            <p className="text-accent-300 mt-6 text-lg leading-8">
               Indulge in the finest craftsmanship and design with our collection
               of prestigious brands. Elevate your wardrobe with timeless pieces
               that embody sophistication, innovation, and unparalleled quality.
@@ -45,7 +45,7 @@ function LogoCloud() {
             <div className="mt-8 flex items-center gap-x-6">
               <a
                 href="#"
-                className="rounded-md bg-white px-3.5 py-2.5 font-display text-xs font-semibold uppercase  tracking-wider text-primary-950 shadow-sm hover:bg-opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-700"
+                className="text-primary-950 focus-visible:outline-primary-700 rounded-md bg-white px-3.5 py-2.5 font-display text-xs  font-semibold uppercase tracking-wider shadow-sm hover:bg-opacity-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 Explore our store
               </a>

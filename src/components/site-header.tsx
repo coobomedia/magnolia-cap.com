@@ -14,7 +14,7 @@ interface SiteHeaderProps {
   className?: string
 }
 
-export function SiteHeader({ position,className }: SiteHeaderProps) {
+export function SiteHeader({ position, className }: SiteHeaderProps) {
   useEffect(() => {
     const headerHeight = document.querySelector("header")!.offsetHeight
     document.documentElement.style.setProperty(
@@ -28,7 +28,7 @@ export function SiteHeader({ position,className }: SiteHeaderProps) {
       className={cn(
         position,
         className,
-        "top-0 z-40 w-full border-b border-b-accent-200 bg-white"
+        "border-b-accent-200 top-0 z-40 w-full border-b bg-white"
       )}
     >
       <div className="container mx-auto flex h-full items-center space-x-4 sm:justify-between sm:space-x-0">

@@ -1,7 +1,7 @@
 export default function Team() {
   return (
     <section className="relative overflow-hidden">
-      <div className="w-full mx-auto max-w-7xl px-6 sm:mt-40 lg:px-8">
+      <div className="mx-auto w-full max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center ">
             <h6 className="mb-[-25px]">Our Team</h6>

@@ -57,10 +57,10 @@ export default function OurTeamPage() {
     <div className="bg-white py-24 sm:py-32">
       <div className="container mx-auto">
         <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-accent-900 sm:text-4xl">
+          <h2 className="text-accent-900 text-3xl font-bold tracking-tight sm:text-4xl">
             Our team
           </h2>
-          <p className="mt-6 text-lg leading-8 text-accent-600">
+          <p className="text-accent-600 mt-6 text-lg leading-8">
             We’re a dynamic group of individuals who are passionate about what
             we do and dedicated to delivering the best results for our clients.
           </p>
@@ -79,10 +79,10 @@ export default function OurTeamPage() {
                   alt=""
                 />
               </div>
-              <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-accent-900">
+              <h3 className="text-accent-900 mt-6 text-lg font-semibold leading-8 tracking-tight">
                 {person.name}
               </h3>
-              <p className="text-base leading-7 text-accent-600">
+              <p className="text-accent-600 text-base leading-7">
                 {person.role}
               </p>
               <ul role="list" className="mt-6 flex gap-x-6">

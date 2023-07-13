@@ -12,30 +12,30 @@ function TypographyPage() {
         <h1 className=" text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Typography
         </h1>
-        <p className="text-lg text-accent-700 sm:text-xl">
+        <p className="text-accent-700 text-lg sm:text-xl">
           Custom styles for headings, paragraphs, lists, fonts, etc.{" "}
         </p>
-        <small className="italic text-accent-500">
+        <small className="text-accent-500 italic">
           * Update/optimize font familes by referencing this{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://beta.nextjs.org/docs/optimizing/fonts"
           >
             link
           </a>
           .
         </small>
-        <small className="italic text-accent-500">
+        <small className="text-accent-500 italic">
           * To utlize these typography styles each element must be a child of
           the body class. This can be edited in the global.css file within the
           styles folder.
         </small>
-        <small className="italic text-accent-500">
+        <small className="text-accent-500 italic">
           * Should be noted that Tailwind has a{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://tailwindcss.com/docs/typography-plugin"
           >
             plugin
@@ -44,14 +44,14 @@ function TypographyPage() {
           typography. See the{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js"
           >
             default styles
           </a>{" "}
           this plugin provides for a more in-depth analysis and checkout the{" "}
           <Link
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="/blog"
           >
             blog
@@ -61,13 +61,13 @@ function TypographyPage() {
       </section>
       <div className="flex gap-4 ">
         <a
-          className="mt-4 inline-flex h-10 cursor-pointer items-center justify-center rounded-md bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2   "
+          className="bg-primary-600 hover:bg-primary-500 focus:ring-primary-600 mt-4 inline-flex h-10 cursor-pointer items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2   "
           href="#section1"
         >
           Anchor Tag to H3
         </a>
         <a
-          className="mt-4 inline-flex h-10 cursor-pointer items-center justify-center rounded-md bg-secondary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-secondary-600 focus:ring-offset-2   "
+          className="bg-secondary-600 hover:bg-secondary-500 focus:ring-secondary-600 mt-4 inline-flex h-10 cursor-pointer items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2   "
           href="#section2"
         >
           Anchor Tag to H6

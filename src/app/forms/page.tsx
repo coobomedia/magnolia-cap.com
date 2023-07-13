@@ -101,11 +101,11 @@ function FormsPage() {
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
           Forms
         </h1>
-        <p className="text-lg text-accent-700 sm:text-xl">
+        <p className="text-accent-700 text-lg sm:text-xl">
           Full featured secure forms using{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://react-hook-form.com/"
           >
             React Hook Form
@@ -113,7 +113,7 @@ function FormsPage() {
           ,{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://zod.dev/"
           >
             Zod
@@ -121,14 +121,14 @@ function FormsPage() {
           and{" "}
           <a
             target="_blank"
-            className="underline underline-offset-2 hover:text-accent-500"
+            className="hover:text-accent-500 underline underline-offset-2"
             href="https://formspree.io/"
           >
             Formspree
           </a>
           .
         </p>
-        <small className="italic text-accent-500">
+        <small className="text-accent-500 italic">
           * To connect to Formspree, you need to create an account. Create a new
           form and go to the integration tab to copy the endpoint URL. Then,
           paste it in the .env file as NEXT_PUBLIC_FORMSPREE_ENDPOINT.
@@ -143,7 +143,7 @@ function FormsPage() {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium leading-6 text-accent-900"
+              className="text-accent-900 block text-sm font-medium leading-6"
             >
               Email
             </label>
@@ -188,7 +188,7 @@ function FormsPage() {
           <div>
             <label
               htmlFor="comment"
-              className="block text-sm font-medium leading-6 text-accent-900"
+              className="text-accent-900 block text-sm font-medium leading-6"
             >
               Your Message
             </label>
@@ -199,7 +199,7 @@ function FormsPage() {
                 rows={4}
                 name="message"
                 id="message"
-                className="block w-full rounded-md border-0 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:py-1.5 sm:text-sm sm:leading-6"
+                className="text-accent-900 ring-accent-300 placeholder:text-accent-400 focus:ring-primary-600 block w-full rounded-md border-0 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:py-1.5 sm:text-sm sm:leading-6"
                 defaultValue={""}
               />
               {errors.message && (
@@ -213,14 +213,14 @@ function FormsPage() {
           <div>
             <label
               htmlFor="location"
-              className="block text-sm font-medium leading-6 text-accent-900"
+              className="text-accent-900 block text-sm font-medium leading-6"
             >
               Location
             </label>
             <select
               id="location"
               {...register("location")}
-              className="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-accent-900 ring-1 ring-inset ring-accent-300 focus:ring-2 focus:ring-primary-600 sm:text-sm sm:leading-6"
+              className="text-accent-900 ring-accent-300 focus:ring-primary-600 mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 ring-1 ring-inset focus:ring-2 sm:text-sm sm:leading-6"
               defaultValue="United States"
             >
               <option>United States</option>
@@ -230,10 +230,10 @@ function FormsPage() {
           </div>
 
           <fieldset>
-            <legend className="text-base font-semibold leading-6 text-accent-900">
+            <legend className="text-accent-900 text-base font-semibold leading-6">
               Fruits
             </legend>
-            <div className="mt-4 divide-y divide-accent-200 border-y border-accent-200">
+            <div className="divide-accent-200 border-accent-200 mt-4 divide-y border-y">
               {fruits.map(({ label, value }, index) => {
                 return (
                   <div
@@ -243,7 +243,7 @@ function FormsPage() {
                     <div className="min-w-0 flex-1 text-sm leading-6">
                       <label
                         htmlFor={`fruits-${label}`}
-                        className="select-none font-medium text-accent-900"
+                        className="text-accent-900 select-none font-medium"
                       >
                         {label}
                       </label>
@@ -251,7 +251,7 @@ function FormsPage() {
                     <div className="ml-3 flex h-6 items-center">
                       <input
                         {...register("fruits")}
-                        className="h-4 w-4 rounded border-accent-300 text-primary-600 focus:ring-primary-600"
+                        className="border-accent-300 text-primary-600 focus:ring-primary-600 h-4 w-4 rounded"
                         aria-invalid={errors["fruits"] ? "true" : "false"}
                         value={value}
                         type="checkbox"
@@ -264,10 +264,10 @@ function FormsPage() {
           </fieldset>
 
           <div>
-            <label className="text-base font-semibold text-accent-900">
+            <label className="text-accent-900 text-base font-semibold">
               Notifications
             </label>
-            <p className="text-sm text-accent-500">
+            <p className="text-accent-500 text-sm">
               How do you prefer to receive notifications?
             </p>
             <fieldset className="mt-4">
@@ -281,11 +281,11 @@ function FormsPage() {
                         value={value}
                         type="radio"
                         defaultChecked={value === "email"}
-                        className="h-4 w-4 border-accent-300 text-primary-600 focus:ring-primary-600"
+                        className="border-accent-300 text-primary-600 focus:ring-primary-600 h-4 w-4"
                       />
                       <label
                         htmlFor={label}
-                        className="ml-3 block text-sm font-medium leading-6 text-accent-900"
+                        className="text-accent-900 ml-3 block text-sm font-medium leading-6"
                       >
                         {label}
                       </label>

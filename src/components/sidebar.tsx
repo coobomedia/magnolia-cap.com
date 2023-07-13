@@ -27,11 +27,11 @@ const posts = allPosts
 function Sidebar() {
   return (
     <div className="mt-10 lg:mt-0">
-      <h2 className="text-lg font-medium text-accent-900">Recent Articles</h2>
+      <h2 className="text-accent-900 text-lg font-medium">Recent Articles</h2>
 
-      <div className="mt-4 rounded-lg border border-accent-200 bg-white shadow-sm">
+      <div className="border-accent-200 mt-4 rounded-lg border bg-white shadow-sm">
         <h3 className="sr-only">Items in your cart</h3>
-        <ul role="list" className="divide-y divide-accent-200">
+        <ul role="list" className="divide-accent-200 divide-y">
           {posts.map((product) => (
             <li key={product.slug} className="flex px-4 py-6 sm:px-6">
               <div className="shrink-0">
@@ -50,7 +50,7 @@ function Sidebar() {
                     <h4 className="text-sm">
                       <Link
                         href={`/blog/${product.slug}`}
-                        className="font-medium text-accent-700 hover:text-accent-500"
+                        className="text-accent-700 hover:text-accent-500 font-medium"
                       >
                         {product.title}
                       </Link>
@@ -58,12 +58,12 @@ function Sidebar() {
                   </div>
 
                   <div className="ml-4 flow-root shrink-0">
-                    <p className=" text-xs text-accent-500">
+                    <p className=" text-accent-500 text-xs">
                       {product.publishedAt}
                     </p>
                   </div>
                 </div>
-                <p className="mt-1 line-clamp-3 text-xs text-accent-500">
+                <p className="text-accent-500 mt-1 line-clamp-3 text-xs">
                   {product.excerpt}
                 </p>
               </div>

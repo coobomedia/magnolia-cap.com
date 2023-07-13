@@ -44,7 +44,7 @@ export const FormTextarea = <TFormValues extends Record<string, any>>({
     <div className={className}>
       <label
         htmlFor={id}
-        className="block text-sm font-medium leading-6 text-accent-900"
+        className="text-accent-900 block text-sm font-medium leading-6"
       >
         {label}
       </label>
@@ -54,7 +54,7 @@ export const FormTextarea = <TFormValues extends Record<string, any>>({
           name={name}
           aria-invalid={!!(errors && errorMessages)}
           className={cn(
-            "block w-full rounded-md border-0 text-accent-900 shadow-sm ring-1 ring-inset ring-accent-300 transition-colors placeholder:text-accent-400 focus:ring-2 focus:ring-inset focus:ring-primary-600 sm:py-1.5 sm:text-sm sm:leading-6",
+            "text-accent-900 ring-accent-300 placeholder:text-accent-400 focus:ring-primary-600 block w-full rounded-md border-0 shadow-sm ring-1 ring-inset transition-colors focus:ring-2 focus:ring-inset sm:py-1.5 sm:text-sm sm:leading-6",
             hasError
               ? "  text-red-900   ring-red-300 placeholder:text-red-300  focus:ring-red-500 "
               : ""

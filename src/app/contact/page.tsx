@@ -2,19 +2,11 @@
 
 import { useToast } from "@/hooks/use-toast"
 import {
-  ArrowPathIcon,
   BuildingOfficeIcon,
-  CloudArrowUpIcon,
   EnvelopeIcon,
-  LockClosedIcon,
   MapPinIcon,
   PhoneIcon,
 } from "@heroicons/react/20/solid"
-// import {
-//   BuildingOffice2Icon,
-//   EnvelopeIcon,
-//   PhoneIcon,
-// } from "@heroicons/react/24/outline"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2 } from "lucide-react"
 import { useForm } from "react-hook-form"
@@ -125,8 +117,8 @@ export default function ContactPage() {
                 Need More Information?
               </h2>
               <p className="mt-2 text-3xl font-light capitalize tracking-tight text-secondary ">
-                Contact us directly or leave a message below and we'll get back
-                to you ASAP
+                Contact us directly or leave a message below and we&apos;ll get
+                back to you ASAP
               </p>
             </div>
             <div className="mx-auto mt-10  sm:mt-20 lg:mt-24 ">
@@ -187,7 +179,7 @@ export default function ContactPage() {
           >
             <div className="mx-auto  ">
               <h3 className=" mb-5 text-xl font-medium  text-secondary">
-                Write Us And We'll Get Back To You
+                Write Us And We&apos;ll Get Back To You
               </h3>
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div className="">

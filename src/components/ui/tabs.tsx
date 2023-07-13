@@ -22,7 +22,7 @@ export default function Tabs() {
         <select
           id="tabs"
           name="tabs"
-          className="block w-full rounded-md border-accent-300 focus:border-primary-500 focus:ring-primary-500"
+          className="border-accent-300 focus:border-primary-500 focus:ring-primary-500 block w-full rounded-md"
         >
           {tabs.map((tab) => (
             <option key={tab.name}>{tab.name}</option>
@@ -32,7 +32,7 @@ export default function Tabs() {
       <div className="hidden sm:block">
         <Tab.List
           as="nav"
-          className="isolate flex divide-x divide-accent-200 rounded-lg shadow"
+          className="divide-accent-200 isolate flex divide-x rounded-lg shadow"
           aria-label="Tabs"
         >
           {tabs.map((tab, tabIdx) => (
@@ -41,13 +41,13 @@ export default function Tabs() {
               className={cn(
                 tabIdx === 0 ? "rounded-l-lg" : "",
                 tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                "group relative min-w-0 flex-1 overflow-hidden bg-white p-4 text-center text-sm font-medium hover:bg-accent-50 focus:z-10 ui-selected:text-accent-900 ui-selected:hover:text-accent-700 ui-not-selected:text-accent-500"
+                "hover:bg-accent-50 ui-selected:text-accent-900 ui-selected:hover:text-accent-700 ui-not-selected:text-accent-500 group relative min-w-0 flex-1 overflow-hidden bg-white p-4 text-center text-sm font-medium focus:z-10"
               )}
             >
               <span>{tab.name}</span>
               <span
                 aria-hidden="true"
-                className="test absolute inset-x-0 bottom-0 h-0.5 ui-selected:bg-primary-500 ui-not-selected:bg-transparent"
+                className="test ui-selected:bg-primary-500 absolute inset-x-0 bottom-0 h-0.5 ui-not-selected:bg-transparent"
               />
             </Tab>
           ))}
