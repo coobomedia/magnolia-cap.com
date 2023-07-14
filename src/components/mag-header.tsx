@@ -41,7 +41,7 @@ export default function MagHeader() {
   return (
     <Disclosure
       as="nav"
-      className={`${isSticky ? "sticky top-0 z-60" : ""} bg-primary z-10`}
+      className={`${isSticky ? "sticky top-0" : ""} bg-primary z-10`}
     >
       {({ open }) => (
         <>
