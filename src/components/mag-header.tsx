@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import {
@@ -19,8 +20,29 @@ const navigation = [
 ]
 
 export default function MagHeader() {
+  const [isSticky, setIsSticky] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   return (
-    <Disclosure as="nav" className="bg-primary">
+    <Disclosure
+      as="nav"
+      className={`${isSticky ? "sticky top-0 z-60" : ""} bg-primary z-10`}
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl border-x px-4  sm:px-6 lg:px-8">

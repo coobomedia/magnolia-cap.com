@@ -16,8 +16,11 @@ const services = [
 ]
 
 export default function TargetAssetClasses() {
-  retur
-    <section className="relative  overflow-hidden bg-primary min-h-[500px] flex justify-center">
+  return (
+    <section
+      id="targeted-assets"
+      className="relative  overflow-hidden bg-primary min-h-[500px] flex justify-center"
+    >
       <div className="mx-auto w-full max-w-7xl px-6 py-10 flex flex-col md:flex-row lg:flex-wrap justify-center border-x">
         <div className="w-full lg:w-1/2 flex items-center ">
           <h2>Targeted asset classes</h2>
