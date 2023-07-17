@@ -3,18 +3,18 @@ import MailToLink from "./mailtolink"
 export default function Team() {
   return (
     <section id="team" className="relative overflow-hidden">
-      <div className="w-full mx-auto max-w-7xl py-10 border-x">
-        <div className="p-6 mt-10 mb-8">
+      <div className="mx-auto w-full max-w-7xl border-x py-10">
+        <div className="mb-8 mt-10 p-6">
           <div className="mx-auto max-w-2xl text-center ">
-            <h6 className="mb-[-25px] uppercase tracking-widest font-display text-magGray">
+            <h6 className="mb-[-25px] font-display uppercase tracking-widest text-magGray">
               Our Team
             </h6>
             <h2>Over 55 Years Combined Experience</h2>
           </div>
         </div>
-        <div className="w-full mx-auto max-w-7xl pb-10 px-10">
-          <div className="flex flex-col lg:flex-row gap-6">
-            <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+        <div className="mx-auto w-full max-w-7xl px-10 pb-10">
+          <div className="flex flex-col gap-6 lg:flex-row">
+            <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
               <h3>Andrew Kollaer</h3>
               <h6 className="!mt-0  font-display text-magGray">
                 Co-founder, Managing Partner
@@ -41,7 +41,7 @@ export default function Team() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 m-auto icon-zoom"
+                    className="icon-zoom m-auto h-6 w-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -52,7 +52,7 @@ export default function Team() {
                 </MailToLink>
               </p>
             </div>
-            <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+            <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
               <h3>Travis Frazier</h3>
               <h6 className="!mt-0 font-display text-magGray">
                 Co-founder, Managing Partner
@@ -80,7 +80,7 @@ export default function Team() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 m-auto icon-zoom"
+                    className="icon-zoom m-auto h-6 w-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -91,7 +91,7 @@ export default function Team() {
                 </MailToLink>
               </p>
             </div>
-            <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+            <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
               <h3>Taylor Tipton</h3>
               <h6 className="!mt-0 font-display text-magGray">
                 Co-founder, Managing Partner
@@ -119,7 +119,7 @@ export default function Team() {
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 m-auto icon-zoom"
+                    className="icon-zoom m-auto h-6 w-6"
                   >
                     <path
                       strokeLinecap="round"

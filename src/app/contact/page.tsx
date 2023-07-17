@@ -132,7 +132,7 @@ export default function ContactPage() {
                     Phone
                   </dt>
                   <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-text">
-                    <ul className="flex-auto list-none ml-0">
+                    <ul className="ml-0 flex-auto list-none">
                       <li>Andrew: 713.818.3300</li>
                       <li>Travis: 713.516.5833</li>
                     </ul>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     Email
                   </dt>
                   <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-text">
-                    <ul className="flex-auto list-none ml-0">
+                    <ul className="ml-0 flex-auto list-none">
                       <li>akollaer@magnolia-cap.com</li>
                       <li>tfrazier@magnolia-cap.com</li>
                     </ul>
@@ -162,7 +162,7 @@ export default function ContactPage() {
                     Address
                   </dt>
                   <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-text">
-                    <ul className="flex-auto list-none ml-0">
+                    <ul className="ml-0 flex-auto list-none">
                       <li>675 Bering Drive, Suite 140</li>
                     </ul>
                   </dd>

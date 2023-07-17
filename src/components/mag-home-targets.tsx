@@ -19,11 +19,10 @@ export default function TargetAssetClasses() {
   return (
     <section
       id="targeted-assets"
-      className="relative  overflow-hidden bg-primary min-h-[500px] flex justify-center"
+      className="relative  flex min-h-[500px] justify-center overflow-hidden bg-primary"
     >
-      <div className="mx-auto w-full max-w-7xl px-6 py-10 flex flex-col md:flex-row lg:flex-wrap justify-center border-x">
-        <div className="w-full lg:w-1/2 flex items-center ">
-
+      <div className="mx-auto flex w-full max-w-7xl flex-col justify-center border-x px-6 py-10 md:flex-row lg:flex-wrap">
+        <div className="flex w-full items-center lg:w-1/2 ">
           <h2>Targeted asset classes</h2>
         </div>
         <div className="flex w-full flex-col items-center lg:w-1/2 lg:justify-center">

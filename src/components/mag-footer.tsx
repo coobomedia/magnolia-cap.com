@@ -3,7 +3,7 @@ export default function MagFooter() {
     <footer className="border-t bg-white">
       <div className="mx-auto px-6 py-8 md:flex md:items-center md:justify-between lg:px-8">
         <div>
-          <p className="text-center text-sm leading-5 text-magGray mb-0">
+          <p className="mb-0 text-center text-sm leading-5 text-magGray">
             &copy; {new Date().getFullYear()} Magnolia Private Capital. All
             rights reserved.
           </p>

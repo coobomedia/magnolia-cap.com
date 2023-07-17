@@ -5,11 +5,11 @@ export default function TeamMembers() {
   return (
     <section
       id="team"
-      className="relative  overflow-hidden bg-primary flex justify-center"
+      className="relative  flex justify-center overflow-hidden bg-primary"
     >
-      <div className="w-full mx-auto max-w-7xl py-20 px-10 border-x">
-        <div className="flex flex-col lg:flex-row gap-6">
-          <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+      <div className="mx-auto w-full max-w-7xl border-x px-10 py-20">
+        <div className="flex flex-col gap-6 lg:flex-row">
+          <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
             <h3>Andrew Kollaer</h3>
             <h6 className="!mt-0">Co-founder, Managing Partner</h6>
             <p>
@@ -30,7 +30,7 @@ export default function TeamMembers() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 m-auto"
+                  className="m-auto h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -41,7 +41,7 @@ export default function TeamMembers() {
               </Link>
             </p>
           </div>
-          <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+          <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
             <h3>Travis Frazier</h3>
             <h6 className="!mt-0">Co-founder, Managing Partner</h6>
             <p>
@@ -62,7 +62,7 @@ export default function TeamMembers() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 m-auto"
+                  className="m-auto h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -73,7 +73,7 @@ export default function TeamMembers() {
               </Link>
             </p>
           </div>
-          <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+          <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
             <h3>Taylor Tipton</h3>
             <h6 className="!mt-0">Co-founder, Managing Partner</h6>
             <p>
@@ -95,7 +95,7 @@ export default function TeamMembers() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 m-auto"
+                  className="m-auto h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
