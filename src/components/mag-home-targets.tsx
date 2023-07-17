@@ -23,6 +23,7 @@ export default function TargetAssetClasses() {
     >
       <div className="mx-auto w-full max-w-7xl px-6 py-10 flex flex-col md:flex-row lg:flex-wrap justify-center border-x">
         <div className="w-full lg:w-1/2 flex items-center ">
+
           <h2>Targeted asset classes</h2>
         </div>
         <div className="flex w-full flex-col items-center lg:w-1/2 lg:justify-center">
@@ -37,7 +38,7 @@ export default function TargetAssetClasses() {
             <Link href="#team" scroll={false}>
               <button
                 type="button"
-                className=" bg-accent px-6 py-2.5 flex font-normal text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className=" flex bg-accent px-6 py-2.5 font-normal text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 <span>Learn More</span>
                 <svg
@@ -46,7 +47,7 @@ export default function TargetAssetClasses() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 ml-4"
+                  className="ml-4 h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
