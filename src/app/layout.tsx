@@ -1,27 +1,17 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
-import {
-  Archivo,
-  EB_Garamond,
-  Montserrat,
-  Nunito_Sans,
-  Roboto,
-} from "next/font/google"
+import { Montserrat, Roboto } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 
 import { cn } from "@/lib/utils"
-import Footer from "@/components/footer"
+import MagFooter from "@/components/mag-footer"
 import MagHeader from "@/components/mag-header"
 import { Toaster } from "@/components/ui/toaster"
 
-const ebGaramond = EB_Garamond({
+const roboto = Roboto({
   subsets: ["latin"],
-  variable: "--font-eb-garamond",
-})
-
-const nunitoSans = Nunito_Sans({
-  subsets: ["latin"],
-  variable: "--font-nunito-sans",
+  variable: "--font-roboto",
+  weight: ["300"],
 })
 
 const montserrat = Montserrat({
@@ -47,15 +37,15 @@ export default function RootLayout({
     <html
       className={cn(
         montserrat.variable,
-        nunitoSans.variable,
+        roboto.variable,
         "scroll-smooth font-sans antialiased"
       )}
       lang="en"
     >
-      <body className=" bg-white  ">
+      <body className=" bg-white ">
         <MagHeader />
         {children}
-        <Footer />
+        <MagFooter />
         {/* <Toaster />
         <Analytics /> */}
       </body>

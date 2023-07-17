@@ -1,5 +1,4 @@
-import Image from "next/image"
-import Link from "next/link"
+import MailToLink from "./mailtolink"
 
 export default function Team() {
   return (
@@ -7,93 +6,130 @@ export default function Team() {
       <div className="w-full mx-auto max-w-7xl py-10 border-x">
         <div className="p-6 mt-10 mb-8">
           <div className="mx-auto max-w-2xl text-center ">
-            <h6 className="mb-[-25px] uppercase text-[#848484] tracking-widest">
+            <h6 className="mb-[-25px] uppercase tracking-widest font-display text-magGray">
               Our Team
             </h6>
-            <h3>Over 55 Years Combined Experience</h3>
+            <h2>Over 55 Years Combined Experience</h2>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-4">
-          <div className="w-full lg:w-1/2">
-            <Image
-              src="/images/magnolia-flower.jpg"
-              alt="Magnolia Tree Graphic"
-              width={2432}
-              height={1442}
-              className="w-full object-cover shadow-lg mb-8"
-            />
-            <div className="flex justify-center">
-              <Link href="#team-members" scroll={false}>
-                <button
-                  type="button"
-                  className="inline-flex bg-accent px-6 py-2.5 font-normal text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+        <div className="w-full mx-auto max-w-7xl pb-10 px-10">
+          <div className="flex flex-col lg:flex-row gap-6">
+            <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+              <h3>Andrew Kollaer</h3>
+              <h6 className="!mt-0  font-display text-magGray">
+                Co-founder, Managing Partner
+              </h6>
+              <p>
+                Andrew has 15 years of investment experience in oil & gas,
+                infrastructure and real estate. Andrew has managed multiple
+                private investment platforms on behalf of both institutional and
+                retail investors. Andrew established his investment experience
+                with roles at Intrepid Financial Partners, OMERS Strategic
+                Investments and Guggenheim Partners. Andrew earned a BBA in
+                Finance from Texas A&M University and an MBA from the McCombs
+                School of Business, University of Texas at Austin.
+              </p>
+              <p>
+                <MailToLink
+                  email="akollaer@magnolia-cap.com"
+                  subject="Magnolia Capital Inquiry"
+                  body="Hello Andrew,"
                 >
-                  <span>Meet Our Team</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 ml-4"
+                    className="w-6 h-6 m-auto icon-zoom"
                   >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                     />
                   </svg>
-                </button>
-              </Link>
+                </MailToLink>
+              </p>
             </div>
-          </div>
-          <div className="w-full lg:w-1/2 flex flex-col px-6 lg:py-0 py-6">
-            <h5>Expand Your Team</h5>
-            <p>
-              For RIAs in need of bandwidth to establish or manage an existing
-              private investment platform, our team works alongside wealth
-              managers to assist in the following roles: deal sourcing,
-              evaluating, investment management, and reporting. Our deal flow
-              and investment capabilities are built to replace any need for a
-              full-time internal team, at a fraction of the cost.
-            </p>
-            <h5>Duties Include:</h5>
-            <ul className="mt-0">
-              <li>
-                Work in partnership with wealth managers to develop objectives
-                and strategies to offer private investments to their clients.
-              </li>
-              <li>
-                Source, evaluate and propose investments as part of a fund
-                formed for the private wealth manager or individual clients
-              </li>
-              <li>
-                Understand fund structure or vehicle that is most appropriate
-              </li>
-              <li>Experience to structure investments and terms thereof</li>
-              <li>
-                Prepare diligence and investment memorandums for fund- and
-                investment-level marketing material
-              </li>
-              <li>
-                Manage investments for the private wealth manager within the
-                fund or for stand-alone investments with individual clients
-              </li>
-              <li>
-                Provide up-to-date information, quarterly reporting of
-                investment progress and valuation estimates
-              </li>
-              <li>
-                Assist in managing capital calls, distributions and financial
-                statements with fund administrators
-              </li>
-              <li>Manage annual audit and tax documentation</li>
-              <li>
-                Provide global support for all private investment needs to
-                effectively add breadth to the private wealth manager’s
-                offerings
-              </li>
-            </ul>
+            <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+              <h3>Travis Frazier</h3>
+              <h6 className="!mt-0 font-display text-magGray">
+                Co-founder, Managing Partner
+              </h6>
+              <p>
+                Travis has over 15 years of traditional and renewable energy
+                investing experience. With ten years at Simmons and Company
+                International and five years at Heikkinen Energy Advisors (now
+                Pickering Energy Partners), Travis advised some of the largest
+                institutional investors in the US and Canada. Most recently,
+                Travis consulted one of the largest oil and gas minerals
+                companies in leveraging its asset base in the evolving energy
+                climate. Travis earned his BA from the University of Texas at
+                Austin.
+              </p>
+              <p>
+                <MailToLink
+                  email="tfrazier@magnolia-cap.com"
+                  subject="Magnolia Capital Inquiry"
+                  body="Hello Travis,"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 m-auto icon-zoom"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                </MailToLink>
+              </p>
+            </div>
+            <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+              <h3>Taylor Tipton</h3>
+              <h6 className="!mt-0 font-display text-magGray">
+                Co-founder, Managing Partner
+              </h6>
+              <p>
+                Taylor has over 25 years of experience in the oil and gas
+                industry. Prior to joining Magnolia Private Capital, Mr. Tipton
+                spent eight years as President of ARM Energy where he managed
+                ARM’s trading operation and midstream investments, including the
+                development of two large scale greenfield midstream assets.
+                Previously, Mr. Tipton worked in a variety of roles for Dynegy,
+                ConocoPhillips, Eagle Energy, and EDF Trading where he was SVP
+                Head of North American Trading. Mr. Tipton earned his BA from
+                the University of Texas at Austin.
+              </p>
+              <p>
+                <MailToLink
+                  email="ttipton@magnolia-cap.com"
+                  subject="Magnolia Capital Inquiry"
+                  body="Hello Taylor,"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 m-auto icon-zoom"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                    />
+                  </svg>
+                </MailToLink>
+              </p>
+            </div>
           </div>
         </div>
       </div>
