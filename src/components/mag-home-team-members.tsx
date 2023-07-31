@@ -30,7 +30,7 @@ export default function TeamMembers() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 m-auto"
+                  className="m-auto h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -41,7 +41,7 @@ export default function TeamMembers() {
               </Link>
             </p>
           </div>
-          <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+          <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
             <h3>Travis Frazier</h3>
             <h6 className="!mt-0">Co-founder, Managing Partner</h6>
             <p>
@@ -62,7 +62,7 @@ export default function TeamMembers() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 m-auto"
+                  className="m-auto h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"
@@ -73,7 +73,7 @@ export default function TeamMembers() {
               </Link>
             </p>
           </div>
-          <div className="w-full lg:w-1/3 text-center bg-white p-10 border rounded-md">
+          <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
             <h3>Taylor Tipton</h3>
             <h6 className="!mt-0">Co-founder, Managing Partner</h6>
             <p>
@@ -95,7 +95,7 @@ export default function TeamMembers() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 m-auto"
+                  className="m-auto h-6 w-6"
                 >
                   <path
                     strokeLinecap="round"

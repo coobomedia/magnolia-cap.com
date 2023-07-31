@@ -6,7 +6,6 @@ import { Disclosure, Menu, Transition } from "@headlessui/react"
 import {
   ArrowUpRightIcon,
   Bars3Icon,
-  BellIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline"
 
@@ -41,7 +40,7 @@ export default function MagHeader() {
   return (
     <Disclosure
       as="nav"
-      className={`${isSticky ? "sticky top-0" : ""} bg-primary z-10`}
+      className={`${isSticky ? "sticky top-0" : ""} z-10 bg-primary`}
     >
       {({ open }) => (
         <>
@@ -114,9 +113,8 @@ export default function MagHeader() {
             <Disclosure.Panel static>
               <ul className="divide-y">
                 {navigation.map((item) => (
-                  <li>
+                  <li key={item.name}>
                     <Disclosure.Button
-                      key={item.name}
                       as={Link}
                       href={item.href}
                       className="block py-6 text-center text-base font-light text-gray-500 hover:text-secondary"
