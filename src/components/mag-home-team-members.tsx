@@ -7,9 +7,9 @@ export default function TeamMembers() {
       id="team"
       className="relative  flex justify-center overflow-hidden bg-primary"
     >
-      <div className="mx-auto w-full max-w-7xl border-x px-10 py-20">
-        <div className="flex flex-col gap-6 lg:flex-row">
-          <div className="w-full rounded-md border bg-white p-10 text-center lg:w-1/3">
+      <div className="w-full mx-auto max-w-7xl py-20 px-10 border-x">
+        <div className="flex flex-col lg:flex-row gap-6">
+          <div className="w-full lg:w-1/3 text-center p-10 border rounded-md">
             <h3>Andrew Kollaer</h3>
             <h6 className="!mt-0">Co-founder, Managing Partner</h6>
             <p>

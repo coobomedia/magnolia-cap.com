@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="relative isolate h-[72vh] overflow-hidden bg-primary">
       <div className="mx-auto h-full max-w-7xl items-center border-x px-6 pb-24 pt-10 sm:pb-32 lg:flex">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:w-2/3 lg:shrink-0 lg:pt-6">
-          <h1 className="mt-10 uppercase sm:text-6xl">
+          <h1 className="mt-10 uppercase">
             Streamlined Private Investment Firm
           </h1>
           <p className="text-primary-300 mt-6 leading-8">

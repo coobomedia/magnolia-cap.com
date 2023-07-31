@@ -82,7 +82,7 @@
   }
 
   body h1 {
-    @apply text-5xl font-extralight uppercase;
+    @apply text-5xl font-light uppercase;
   }
 
   body h2 {
@@ -103,15 +103,6 @@
 
   body h6 {
     @apply text-lg uppercase font-extralight tracking-[2px];
-  }
-
-  body ul,
-  body ol {
-    @apply my-6 ml-6  [&>li]:mt-2;
-  }
-
-  body ul {
-    @apply list-disc;
   }
 
   body ol {

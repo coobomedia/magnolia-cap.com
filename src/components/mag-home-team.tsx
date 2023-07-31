@@ -2,9 +2,9 @@ import MailToLink from "./mailtolink"
 
 export default function Team() {
   return (
-    <section id="team" className="relative overflow-hidden">
-      <div className="mx-auto w-full max-w-7xl border-x py-10">
-        <div className="mb-8 mt-10 p-6">
+    <section id="team" className="bg-primary relative overflow-hidden">
+      <div className="w-full mx-auto max-w-7xl py-10 border-x">
+        <div className="p-6 mt-10 mb-8">
           <div className="mx-auto max-w-2xl text-center ">
             <h6 className="mb-[-25px] font-display uppercase tracking-widest text-magGray">
               Our Team

@@ -68,13 +68,19 @@ export default function MagHeader() {
                   <div className="m-auto">
                     <button
                       type="button"
-                      className=" inline-flex items-center gap-x-1.5 bg-[#F0583C] px-8 py-4 font-normal  leading-none text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
+                      className="bg-[#F0583C] px-8 py-4 font-normal  leading-none text-white shadow-sm hover:bg-secondary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
                     >
-                      Investment Access
-                      <ArrowUpRightIcon
-                        className="-mr-0.5 h-5 w-5 stroke-2"
-                        aria-hidden="true"
-                      />
+                      <a
+                        href="https://app.junipersquare.com/login?path=%2Fi%2Fmagnolia-cap%2Fhome"
+                        target="_blank"
+                        className=" inline-flex items-center gap-x-1.5 "
+                      >
+                        Investment Access
+                        <ArrowUpRightIcon
+                          className="-mr-0.5 h-5 w-5 stroke-2"
+                          aria-hidden="true"
+                        />
+                      </a>
                     </button>
                   </div>
                 </div>
@@ -111,7 +117,7 @@ export default function MagHeader() {
                     <Disclosure.Button
                       as={Link}
                       href={item.href}
-                      className="block py-6 text-center text-base font-medium text-gray-500"
+                      className="block py-6 text-center text-base font-light text-gray-500 hover:text-secondary"
                     >
                       {item.name}
                     </Disclosure.Button>
