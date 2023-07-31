@@ -21,11 +21,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "Coobo Media Template",
+    default: "Magnolia Private Capital",
     template: "%s | Coobo Media Template",
   },
-  description:
-    "A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.",
+  description: "Streamlined Private Investment Firm.",
 }
 
 export default function RootLayout({
