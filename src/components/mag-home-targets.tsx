@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-import commrealestate from "../../public/images/commercial-real-estate.jpg"
+import commrealestate from "../../public/images/commercial-real-estate-2.jpg"
 import oilgasrig from "../../public/images/oil-gas-rig.jpg"
 
 const services = [
